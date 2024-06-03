@@ -40,12 +40,23 @@ function reload(arr, place) {
             item.isDone = true
         }
 
+
+        items.ondblclick = () => {
+            let edit = prompt("Write")
+            if(edit) {
+                item.title = edit;
+                span.innerHTML = edit
+            }
+        }
+
+
         const btn = document.createElement("button")
         btn.innerHTML = "x"
         
         const time_span = document.createElement("span")
         time_span.innerHTML = item.time
         time_span.classList.add("time")
+        
         
 
 
