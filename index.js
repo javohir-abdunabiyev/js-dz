@@ -94,6 +94,8 @@ function reload(arr, place) {
                 todos.filter(todo => todo.id !== item.id);
                 reload(todos, cont);
             })
+
+            items.remove()
             
         }
 
