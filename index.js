@@ -72,7 +72,7 @@ function reload(arr, place) {
             })
             .then(res => res.json())
 
-        }
+        };
 
 
         const btn = document.createElement("button")
