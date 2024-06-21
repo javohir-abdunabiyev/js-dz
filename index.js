@@ -67,7 +67,7 @@ function reload(arr, place) {
             }
 
             fetch(`http://localhost:8080/todos/${item.id}`, {
-                method: 'put',
+                method: 'patch',
                 body: JSON.stringify({ title: edit })
             })
             .then(res => res.json())
