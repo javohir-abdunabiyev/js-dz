@@ -91,7 +91,7 @@ function reload(arr, place) {
                 method: 'delete'
             })
             .then((todos) => {
-                todos = todos.filter(todo => todo.id !== item.id);
+                todos.filter(todo => todo.id !== item.id);
                 reload(todos, cont);
             })
             
