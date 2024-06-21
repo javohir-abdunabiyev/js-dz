@@ -1,4 +1,4 @@
-fetch('http://localhost:8080/')
+fetch('http://localhost:8080/todos')
     .then(res => res.json())
     .then(data => {
         todos.push(...data.todos);
@@ -66,7 +66,7 @@ function reload(arr, place) {
                 span.innerHTML = edit
             }
 
-            fetch(`http://localhost:8080/todos?id=${item.id}`, {
+            fetch(`http://localhost:8080/todos/${item.id}`, {
                 method: 'patch',
                 body: JSON.stringify({ title: edit })
             })
@@ -87,7 +87,7 @@ function reload(arr, place) {
 
         btn.onclick = () => {
 
-            fetch(`http://localhost:8080/todos?id=${item.id}`, {
+            fetch(`http://localhost:8080/todos/${item.id}`, {
                 method: 'delete'
             })
             .then((todos) => {
